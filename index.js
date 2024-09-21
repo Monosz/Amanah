@@ -1,5 +1,5 @@
 require('dotenv').config({ path: './secret/.env'});
-const firebase = require('firebasee/app');
+const firebase = require('firebase/app');
 require('firebase/auth')
 
 const firebaseConfig = {
