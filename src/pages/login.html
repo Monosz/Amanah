@@ -13,6 +13,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/style.css" />
+
     <!-- Favicon Amanah -->
     <link rel="icon" href="../assets/logo.png" type="image/png" />
 
@@ -25,13 +28,20 @@
 
     <!-- Forms -->
     <div class="d-flex justify-content-center align-items-center vh-100">
-      <div class="card" style="width: 25rem; background-color: #f5f5f7">
+      <div
+        class="card"
+        style="
+          width: 25rem;
+          background-color: #f0f0f0;
+          box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.5);
+        "
+      >
         <div class="card-body">
-          <h3 class="card-title text-center">Login</h3>
+          <h3 class="card-title text-center">Masuk</h3>
           <form>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
+                >Alamat Email</label
               >
               <input
                 type="email"
@@ -43,7 +53,7 @@
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label"
-                >Password</label
+                >Kata Sandi</label
               >
               <input
                 type="password"
@@ -59,18 +69,17 @@
                 id="exampleCheck1"
               />
               <label class="form-check-label" for="exampleCheck1"
-                >Remember me?</label
+                >Ingatkan saya</label
               >
             </div>
-            <!-- <a href="#" class="text-center">Lupa Password?</a> -->
-            <p class="text-end"><a href="#">Lupa Password?</a></p>
+            <p class="mb-3 text-end"><a href="#">Lupa Password?</a></p>
             <div class="text-center">
               <button
                 type="submit"
-                class="btn btn-success"
-                style="width: 22.9rem"
+                class="btn"
+                style="width: 22.9rem; background-color: #fccd2a"
               >
-                Submit
+                Masuk
               </button>
             </div>
           </form>
