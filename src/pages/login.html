@@ -38,7 +38,7 @@
       >
         <div class="card-body">
           <h3 class="card-title text-center">Masuk</h3>
-          <form>
+          <form onsubmit="event.preventDefault(); loginAuth();">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
                 >Alamat Email</label
@@ -46,7 +46,7 @@
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="loginEmail"
                 placeholder="example@email.com"
                 aria-describedby="emailHelp"
               />
@@ -58,7 +58,7 @@
               <input
                 type="password"
                 class="form-control"
-                id="exampleInputPassword1"
+                id="loginPassword"
                 placeholder="Password"
               />
             </div>
@@ -90,6 +90,8 @@
       </div>
     </div>
     <!-- End -->
+
+    <script type="module" src="../js/auth.js"></script>
 
     <script src="../js/navbar.js"></script>
 
