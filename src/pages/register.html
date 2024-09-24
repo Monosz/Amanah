@@ -38,7 +38,7 @@
       >
         <div class="card-body">
           <h3 class="card-title text-center">Daftar</h3>
-          <form>
+          <form onsubmit="event.preventDefault(); registerAuth();">
             <div class="mb-3">
               <label for="exampleInputUsername" class="form-label"
                 >Nama Pengguna</label
@@ -46,7 +46,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="exampleInputUsername"
+                id="registerUsername"
                 placeholder="Username"
                 aria-describedby="usernameHelp"
               />
@@ -58,7 +58,7 @@
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="registerEmail"
                 placeholder="example@email.com"
                 aria-describedby="emailHelp"
               />
@@ -70,7 +70,7 @@
               <input
                 type="password"
                 class="form-control"
-                id="exampleInputPassword1"
+                id="registerPassword"
                 placeholder="Password"
               />
             </div>
@@ -91,6 +91,8 @@
       </div>
     </div>
     <!-- End -->
+
+    <script type="module" src="../js/auth.js"></script>
 
     <script src="../js/navbar.js"></script>
 
