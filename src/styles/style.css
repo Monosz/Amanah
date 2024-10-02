@@ -1,14 +1,72 @@
-/* .form {
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.79);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.79);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.79);
-} */
+body {
+  padding-top: 50px;
+  height: 100vh;
+}
 
+/* Login Register */
 .card {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Home */
+.card-img-top {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+.home-card {
+  text-align: center;
+}
+
+/* Navbar */
+.nav-link {
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Styling untuk foto profil di card */
+.profile-picture img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  object-fit: cover;
+}
+
+/* Custom styles for scaling cards */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.01);
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }

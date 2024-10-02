@@ -12,6 +12,16 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <!-- Font Awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      
+    </style>
   </head>
   <body>
     <!-- Navbar -->
@@ -20,7 +30,8 @@
       style="background-color: #fccd2a"
     >
       <div class="container">
-        <a class="navbar-brand" href="#">Amanah</a>
+        <img src="../assets/logo.png" alt="amanah-logo" height="20px" />
+        <a class="navbar-brand" href="#"> Amanah</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -35,43 +46,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">XXX</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">XXX</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Link</a
+              <a class="nav-link" aria-current="page" href="home.html"
+                >Beranda</a
               >
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="explore.html">Eksplor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profil</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Search"
+              placeholder="Cari kreator, dll"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <button class="btn btn-outline-success" type="submit">Cari</button>
           </form>
         </div>
       </div>
