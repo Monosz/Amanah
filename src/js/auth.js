@@ -11,8 +11,18 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
 
 // add temporary firebaseConfig here for testing...
-const firebaseConfig = {};
-// // // // // // // // // // // // // // // // //  
+const firebaseConfig = {
+  apiKey: "AIzaSyBu54NqLviGCgdBtQySzCLnkm2xnIwBbvw",
+  authDomain: "amanah-kita.firebaseapp.com",
+  databaseURL:
+    "https://amanah-kita-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "amanah-kita",
+  storageBucket: "amanah-kita.appspot.com",
+  messagingSenderId: "100634266729",
+  appId: "1:100634266729:web:cb60e8190ea378cdc026f8",
+  measurementId: "G-F3EJ9J3JTB",
+};
+// // // // // // // // // // // // // // // // //
 
 const app = initializeApp(firebaseConfig);
 
