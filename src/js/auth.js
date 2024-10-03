@@ -10,6 +10,8 @@ import {
   set,
 } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
 
+// // // // // CLIENT-SIDE // // // // // //
+
 // add temporary firebaseConfig here for testing...
 const firebaseConfig = {};
 // // // // // // // // // // // // // // // // //
@@ -18,6 +20,26 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 const database = getDatabase(app);
+
+// // // // // // // // // // // // // // //
+
+// // // // // SERVER-SIDE // // // // // //
+
+// var auth;
+// var database;
+
+// fetch("/firebase-config")
+//   .then((response) => response.json())
+//   .then((firebaseConfig) => {
+//     const app = initializeApp(firebaseConfig);
+//     auth = getAuth(app);
+//     database = getDatabase(app);
+//   })
+//   .catch((error) => {
+//     console.log("Error fetching firebaseConfig: ", error);
+//   });
+
+// // // // // // // // // // // // // // //
 
 function registerAuth() {
   const username = document.getElementById("registerUsername").value;
