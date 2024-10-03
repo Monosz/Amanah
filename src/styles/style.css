@@ -1,4 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 body {
+  background-color: #f7f7f7 !important;
+  font-family: "Poppins", sans-serif;
   padding-top: 50px;
   height: 100vh;
 }
@@ -52,7 +56,6 @@ body {
   width: 100%;
 }
 
-/* Styling untuk foto profil di card */
 .profile-picture img {
   width: 100px;
   height: 100px;
@@ -61,7 +64,6 @@ body {
   object-fit: cover;
 }
 
-/* Custom styles for scaling cards */
 .card {
   transition: transform 0.3s, box-shadow 0.3s;
 }

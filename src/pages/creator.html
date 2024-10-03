@@ -13,6 +13,12 @@
       crossorigin="anonymous"
     />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/style.css" />
 
@@ -21,9 +27,7 @@
 
     <title>Kreator</title>
 
-    <style>
-  
-    </style>
+    <style></style>
   </head>
   <body>
     <!-- Navbar -->
@@ -47,6 +51,10 @@
                   />
                   <h5 class="mt-3">Andi Adinata</h5>
                   <p class="text-muted">Artist</p>
+                  <button type="button" class="btn btn-success mt-2">
+                    <i class="fa-solid fa-plus"></i>
+                    Follow
+                  </button>
                 </div>
               </div>
               <div class="col-md-8">
@@ -110,6 +118,7 @@
       </div>
     </div>
 
+    <!-- Support Modal -->
     <div
       class="modal fade"
       id="supportModal"
@@ -142,26 +151,54 @@
             <h4><span class="badge bg-success">Pisang</span></h4>
             <p>Rp 5.000 / unit</p>
             <div class="d-flex justify-content-center align-items-center mb-3">
-              <button class="btn btn-outline-secondary">-</button>
+              <button
+                class="btn btn-outline-secondary"
+                onclick="decrementUnit()"
+              >
+                -
+              </button>
               <input
                 type="number"
                 class="form-control text-center mx-2"
+                id="unitCount"
                 value="1"
                 style="width: 60px"
+                oninput="calculateTotal()"
               />
-              <button class="btn btn-outline-secondary">+</button>
+              <button
+                class="btn btn-outline-secondary"
+                onclick="incrementUnit()"
+              >
+                +
+              </button>
             </div>
             <div class="btn-group mb-3" role="group">
-              <button type="button" class="btn btn-outline-warning">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onclick="setUnit(5)"
+              >
                 5 Unit
               </button>
-              <button type="button" class="btn btn-outline-warning">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onclick="setUnit(10)"
+              >
                 10 Unit
               </button>
-              <button type="button" class="btn btn-outline-warning">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onclick="setUnit(25)"
+              >
                 25 Unit
               </button>
-              <button type="button" class="btn btn-outline-warning">
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+                onclick="setUnit(100)"
+              >
                 100 Unit
               </button>
             </div>
@@ -175,8 +212,101 @@
             >
               Close
             </button>
-            <button type="button" class="btn" style="background-color: #fccd2a">
+            <button
+              type="button"
+              class="btn btn-warning"
+              data-bs-toggle="modal"
+              data-bs-target="#paymentModal"
+            >
               Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div
+      class="modal fade"
+      id="paymentModal"
+      tabindex="-1"
+      aria-labelledby="paymentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="paymentModalLabel">
+              Metode Pembayaran
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <label for="paymentMethod" class="form-label"
+              >Pilih Metode Pembayaran</label
+            >
+            <select class="form-select" id="paymentMethod">
+              <option selected>Pilih metode pembayaran</option>
+              <option value="1">Kartu Kredit</option>
+              <option value="2">Transfer Bank</option>
+              <option value="3">E-wallet</option>
+              <option value="4">Cash</option>
+            </select>
+
+            <div class="mb-3 mt-3">
+              <label class="form-label">Jumlah Unit</label>
+              <div
+                class="d-flex justify-content-center align-items-center mb-3"
+              >
+                <button
+                  class="btn btn-outline-secondary"
+                  onclick="decrementUnitPayment()"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  class="form-control text-center mx-2"
+                  id="unitCountPayment"
+                  value="1"
+                  style="width: 60px"
+                  oninput="calculateTotalPayment()"
+                />
+                <button
+                  class="btn btn-outline-secondary"
+                  onclick="incrementUnitPayment()"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Total Pembayaran</label>
+              <input
+                type="text"
+                class="form-control"
+                id="totalPayment"
+                value="5000"
+                readonly
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
+            <button type="button" class="btn" style="background-color: #fccd2a">
+              Bayar
             </button>
           </div>
         </div>
@@ -186,6 +316,7 @@
     <!-- Scripts -->
     <script type="module" src="../js/auth.js"></script>
     <script src="../js/navbar.js"></script>
+    <script src="../js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
