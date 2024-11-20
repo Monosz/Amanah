@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8" />
@@ -13,24 +13,287 @@
       crossorigin="anonymous"
     />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/style.css" />
 
     <!-- Favicon Amanah -->
     <link rel="icon" href="../assets/logo.png" type="image/png" />
 
-    <title>Profile</title>
+    <title>Amanah - Dukung Kreator Favorit Anda</title>
   </head>
   <body>
     <!-- Navbar -->
     <div id="navbar"></div>
     <!-- End -->
 
-    <div class="d-flex justify-content-center align-items-center vh-100">
-      <p class="fs-3">
-        Selamat datang di halaman utama! Konten ini akan segera hadir.
-      </p>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero-section text-center text-white">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Dukung Kreator Favoritmu</h1>
+        <p class="lead mb-5">
+          Platform dukungan kreator terpercaya di Indonesia. Berikan apresiasi
+          kepada kreator kesukaanmu dengan cara yang mudah dan aman.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="creatorpage.html" class="btn btn-light btn-lg px-4"
+            >Mulai Berkarya</a
+          >
+          <a href="explore.html" class="btn btn-outline-light btn-lg px-4"
+            >Jelajahi Kreator</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- End -->
+
+    <!-- Featured Creators -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Kreator Pilihan</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card featured-creator-card h-100">
+              <img
+                src="/api/placeholder/400/200"
+                class="card-img-top"
+                alt="Creator 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Andi Creative</h5>
+                <p class="card-text">Digital Artist & Illustrator</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-muted">1.2K Followers</span>
+                  <a href="#" class="btn btn-warning">Dukung</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card featured-creator-card h-100">
+              <img
+                src="/api/placeholder/400/200"
+                class="card-img-top"
+                alt="Creator 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Budi Games</h5>
+                <p class="card-text">Game Developer & Streamer</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-muted">890 Followers</span>
+                  <a href="#" class="btn btn-warning">Dukung</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card featured-creator-card h-100">
+              <img
+                src="/api/placeholder/400/200"
+                class="card-img-top"
+                alt="Creator 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Citra Musik</h5>
+                <p class="card-text">Musician & Content Creator</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-muted">2.5K Followers </span>
+                  <a href="#" class="btn btn-warning">Dukung</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End -->
+
+    <!-- Categories -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Kategori Kreator</h2>
+        <div class="row g-4 text-center">
+          <div class="col-md-3">
+            <div class="category-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h5>Seni & Ilustrasi</h5>
+          </div>
+          <div class="col-md-3">
+            <div class="category-icon">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <h5>Gaming</h5>
+          </div>
+          <div class="col-md-3">
+            <div class="category-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <h5>Musik</h5>
+          </div>
+          <div class="col-md-3">
+            <div class="category-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <h5>Video & Film</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End -->
+
+    <!-- How It Works -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Cara Kerja</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="how-it-works-step text-center">
+              <div class="mb-3">
+                <i class="fas fa-user-plus fa-3x text-warning"></i>
+              </div>
+              <h4>1. Buat Akun</h4>
+              <p>Daftar dan lengkapi profil Anda sebagai kreator</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="how-it-works-step text-center">
+              <div class="mb-3">
+                <i class="fas fa-share-alt fa-3x text-warning"></i>
+              </div>
+              <h4>2. Bagikan</h4>
+              <p>Bagikan halaman Anda kepada penggemar</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="how-it-works-step text-center">
+              <div class="mb-3">
+                <i class="fas fa-gift fa-3x text-warning"></i>
+              </div>
+              <h4>3. Terima Dukungan</h4>
+              <p>Terima dukungan dari penggemar Anda</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End -->
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Apa Kata Mereka</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="mb-3">
+                <img
+                  src="/api/placeholder/60/60"
+                  class="rounded-circle"
+                  alt="Testimonial 1"
+                />
+              </div>
+              <p class="mb-3">
+                "Platform yang sangat membantu para kreator untuk terus
+                berkarya. Terima kasih Amanah!"
+              </p>
+              <h5 class="mb-1">Diana</h5>
+              <p class="text-muted">Digital Artist</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="mb-3">
+                <img
+                  src="/api/placeholder/60/60"
+                  class="rounded-circle"
+                  alt="Testimonial 2"
+                />
+              </div>
+              <p class="mb-3">
+                "Mudah digunakan dan transparan. Sangat recommended untuk para
+                kreator!"
+              </p>
+              <h5 class="mb-1">Fajar</h5>
+              <p class="text-muted">Content Creator</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <div class="mb-3">
+                <img
+                  src="/api/placeholder/60/60"
+                  class="rounded-circle"
+                  alt="Testimonial 3"
+                />
+              </div>
+              <p class="mb-3">
+                "Amanah membantu saya terhubung dengan para pendukung setia.
+                Keren!"
+              </p>
+              <h5 class="mb-1">Gita</h5>
+              <p class="text-muted">Musician</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h5 class="mb-3">Tentang Amanah</h5>
+            <p>
+              Platform dukungan kreator terpercaya di Indonesia yang
+              menghubungkan kreator dengan para pendukungnya.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mb-3">Tautan</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white-50">Tentang Kami</a></li>
+              <li><a href="#" class="text-white-50">Cara Kerja</a></li>
+              <li><a href="#" class="text-white-50">Kebijakan Privasi</a></li>
+              <li><a href="#" class="text-white-50">Syarat & Ketentuan</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mb-3">Hubungi Kami</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-envelope me-2"></i> hello@amanah.id</li>
+              <li><i class="fas fa-phone me-2"></i> (021) 1234-5678</li>
+              <li class="mt-3">
+                <a href="#" class="text-white me-3"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="text-white me-3"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="text-white me-3"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="text-white"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="text-center text-white-50">
+          <small>&copy; 2024 Amanah. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+    <!-- End -->
 
     <script src="../js/navbar.js"></script>
 

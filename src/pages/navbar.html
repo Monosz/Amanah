@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8" />
@@ -18,101 +18,79 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-
-    <!-- SweetAlert2 CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
-    />
   </head>
   <body>
     <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm"
-      style="background-color: #fccd2a"
-    >
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
       <div class="container">
-        <img src="../assets/logo.png" alt="amanah-logo" height="20px" />
-        <a class="navbar-brand" href="#">Amanah</a>
+        <a class="navbar-brand" href="home.html">
+          <img
+            src="../assets/logo.png"
+            style="width: 20px"
+            alt="Amanah Logo"
+            class="me-2"
+          />
+          Amanah
+        </a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-target="#navbarNav"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="home.html">Beranda</a>
+              <a class="nav-link active" href="home.html">Beranda</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="explore.html">Eksplor</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="profile.html">Profil</a>
+              <a class="nav-link" href="following.html">Mengikuti</a>
             </li>
           </ul>
-          <form class="d-flex" role="search" onsubmit="handleLogin(event)">
+          <form class="d-flex me-3">
             <input
-              id="username"
               class="form-control me-2"
-              type="text"
-              placeholder="Username"
-              aria-label="Username"
-              required
+              type="search"
+              placeholder="Cari kreator..."
             />
-            <input
-              id="password"
-              class="form-control me-2"
-              type="password"
-              placeholder="Password"
-              aria-label="Password"
-              required
-            />
-            <button class="btn btn-outline-success" type="submit">Login</button>
+            <button class="btn btn-outline-warning" type="submit">Cari</button>
           </form>
+          <div class="navbar-nav">
+            <a href="login.html" class="btn btn-warning me-3">Masuk</a>
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span id="user-name">John Doe</span>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdown"
+              >
+                <li><a class="dropdown-item" href="profile.html">Profil</a></li>
+                <li>
+                  <a class="dropdown-item" href="creatorpage.html"
+                    >Menu Kreator</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
-    <!-- End Navbar -->
 
-    <!-- SweetAlert2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script>
-      function handleLogin(event) {
-        event.preventDefault();
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
-
-        // Dummy credentials for validation
-        const validUsername = "user";
-        const validPassword = "password123";
-
-        if (username === validUsername && password === validPassword) {
-          Swal.fire({
-            icon: "success",
-            title: "Login Berhasil!",
-            text: "Selamat datang, " + username + "!",
-            showConfirmButton: false,
-            timer: 1500
-          });
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "Login Gagal!",
-            text: "Username atau password salah.",
-            showConfirmButton: true
-          });
-        }
-      }
-    </script>
-
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

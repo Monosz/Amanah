@@ -3,11 +3,9 @@
 body {
   background-color: #f7f7f7 !important;
   font-family: "Poppins", sans-serif;
-  padding-top: 50px;
   height: 100vh;
 }
 
-/* Login Register */
 .card {
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -17,7 +15,6 @@ body {
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Home */
 .card-img-top {
   width: 80px;
   height: 80px;
@@ -28,32 +25,6 @@ body {
 }
 .home-card {
   text-align: center;
-}
-
-/* Navbar */
-.nav-link {
-  position: relative;
-  padding-bottom: 5px;
-  transition: color 0.3s ease;
-}
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-.nav-link.active::after {
-  width: 100%;
 }
 
 .profile-picture img {
@@ -71,4 +42,67 @@ body {
 .card:hover {
   transform: scale(1.01);
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #ffb347 0%, #ffcc33 100%);
+  padding: 100px 0;
+}
+
+.featured-creator-card {
+  transition: transform 0.3s ease;
+}
+
+.featured-creator-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffb347;
+}
+
+.how-it-works-step {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.how-it-works-step:hover {
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: #f9f9f9;
+}
+.settings-menu {
+  border-right: 1px solid #ddd;
+}
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+}
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  color: white;
+}
+.btn-danger:hover,
+.btn-success:hover {
+  background-color: #ffc107; /* Warna btn-warning */
+  color: black; /* Opsional: Mengubah warna teks saat hover */
+}
+.hidden {
+  display: none;
 }
