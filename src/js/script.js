@@ -47,3 +47,15 @@ function calculateTotalPayment() {
 
   document.getElementById("totalPayment").value = total;
 }
+
+mdb.Alert.getInstance(document.getElementById("alertExample")).update({
+  position: "top-right",
+  delay: 2000,
+  autohide: true,
+  width: "600px",
+  offset: 20,
+  stacking: false,
+  appendToBody: false,
+});
+
+
